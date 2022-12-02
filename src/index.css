@@ -25,6 +25,10 @@ code {
   margin: 0 auto;
 }
 
+html {
+  background-color: #04000a;
+}
+
 /* ------------------------------------------------------ */
 /* -- Navigation -- */
 
@@ -43,6 +47,19 @@ code {
 .social,
 .footer {
   padding: 50px 25px 25px;
+}
+
+.header,
+.about,
+.projects,
+.experience,
+.social,
+.footer {
+  background-color: #04000a;
+}
+
+p, h1, h2 {
+  color: white;
 }
 
 /* ------------------------------------------------------ */
@@ -87,7 +104,7 @@ code {
 
 .about h2 {
   font-size: 42px;
-  margin: 25px auto;
+  margin: 10px auto;
 }
 
 .about p {
@@ -123,7 +140,7 @@ code {
 
   padding: 20px;
 
-  border: 1px solid #0088BB;
+  border: 1px solid #5409d6;
   border-radius: 8px;
 }
 
@@ -131,6 +148,7 @@ code {
   font-size: 32px;
   font-weight: 300;
   margin-bottom: 10px;
+  color: white;
 }
 
 .projects__card p {
@@ -160,6 +178,7 @@ code {
 
 .experience ul {
   margin: 0 0 10px 50px;
+  color: white;
 }
 
 .experience li {
@@ -188,28 +207,77 @@ code {
 }
 
 /* ------------------------------------------------------ */
+/* -- HR Tags -- */
+.line {
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 35px;
+}
+
+/* ------------------------------------------------------ */
 /* -- HTML COMPONENTS: BUTTON -- */
 .button {
   display: inline-block;
 
-  background: #12BDF3;
+  background: #5409d6;
 
-  padding: 15px 50px;
+  padding: 20px 50px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
 
   font-family: "Work Sans";
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
+  color: black;
+  cursor: pointer;
 
+  transition: all 250ms ease;
+}
+
+.button__WIP {
+  display: inline-block;
+
+  background: #302f2d;
+
+  padding: 20px 50px;
+
+  border: none;
+  border-radius: 20px;
+
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+  transition: all 250ms ease;
+}
+
+.buttonhead {
+  display: inline-block;
+
+  background: #5409d6;
+
+  padding: 20px 50px;
+
+  border: 20px solid #04000a;
+  border-radius: 35px;
+
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 
   transition: all 250ms ease;
 }
 
 .button:hover {
-  background: #0088BB;
+  background: #7729ff;
   color: #FFFFFF;
 }
