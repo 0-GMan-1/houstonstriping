@@ -3,6 +3,7 @@ import uniswap from '../assets/WIP.jpg';
 import compound from '../assets/image.png';
 import aave from '../assets/aave.png';
 import ColoredLine from './ColoredLine'
+import YoutubeEmbed from './YoutubeEmbed'
 
 const Projects = () => {
     return (
@@ -40,14 +41,14 @@ const Projects = () => {
 
                 <div className="projects__card">
                     <h3>Trading Bot</h3>
-                    <img src={aave} alt="Aave Landing Page" />
+                    <YoutubeEmbed embedId="IlpewHiZP58" />
                     <p>An Arbitrage trading bot. Utilizes a javascript bot that interacts with a flashloan smart contract.
                     The bot can scan for arbitrage opportunities on multiple exchanges, and for multiple tokens at the same time
                     to make sure you don't miss out on potential profit. The smart contract uses the DYDX flashloan provider
                     and plugs into the desired exchanges while it waits for an opportunity
                     </p>
 
-                    <a href="https://aave.com/" target="_blank" className="button">Video</a>
+                    <a href="https://www.youtube.com/watch?v=IlpewHiZP58&ab_channel=GrahamSkeen" target="_blank" className="button">Video</a>
                     <a href="https://github.com/0-GMan-1/ArbitrageBot" target="_blank" className="button">Code</a>
                 </div>
             </div>
