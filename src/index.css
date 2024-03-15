@@ -350,7 +350,7 @@ p, h1, h2 {
   }
 
   .button__WIP {
-    transform: translateX(10px);
+    transform: translateX(-5px);
   }
 
   .header {
@@ -364,6 +364,10 @@ p, h1, h2 {
 
   .header__content p {
     font-size: 40px;
+  }
+
+  .projects__card h3 {
+    font-size: 60px;
   }
 
 }
