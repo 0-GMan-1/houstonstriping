@@ -13,15 +13,17 @@ const Projects = () => {
             <div className="projects__cards">
 
                 <div className="projects__card">
-                    <h3 style={{ color: "#5d47ff"}}>Decentralized Videos</h3>
+                    <h3 style={{ color: "#5d47ff"}}>ETH Battles</h3>
                     <img src={uniswap} alt="Uniswap Swap Page" />
-                    <p>Incorperates videos with NFTs. Content creators will have proven ownership
-                        of their videos via NFTs. Uses minting for video creation and burning for deletion.
-                        Creators can be donated to via Cryptocurrency. 
+                    <p>A Web3 Videogame where players duel each other in 1v1 or Guild vs Guild quick and fast paced matches.
+                       The objective is to survive, craft gear, and destroy the enemy tower. Each party will stake equal amounts of ERC-20
+                       Tokens and the winner takes all. Implements features such as a Marketplace with NFT items that you can use in the game, social tab with friends and guilds.
+                       multi purpose pop up window, Token Selector functionality and more
+
                     </p>
 
                     <button className='button__WIP'>Site</button>
-                    <a href="https://github.com/0-GMan-1/DecentralizedVideos" target="_blank" className="button">Code</a>
+                    <a href="https://github.com/0-GMan-1/Eth-Battles" target="_blank" className="button">Code</a>
                 </div>
 
                 <div className="projects__card">
