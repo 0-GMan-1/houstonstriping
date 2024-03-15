@@ -299,10 +299,6 @@ p, h1, h2 {
 
 
 @media only screen and (max-width: 1200px) {
-  .button {
-    color: red;
-  }
-
   .projects {
     width: 1500px;
   }
