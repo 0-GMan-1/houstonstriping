@@ -1,0 +1,32 @@
+
+.scrolling-heading {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+
+    color: #06144b;
+  }
+  
+  .scrolling-heading.scrolling {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+
+    opacity: 1;
+
+    color: #06144b;
+  }
+
+  .placeholder {
+    height: 0; /* Initial height is 0, will be adjusted */
+  }
+  
+  /* Style when the <h1> is sticky to keep space */
+  .placeholder.scrolling {
+    height: 4em;
+    visibility: visible; /* Make placeholder visible */
+  }

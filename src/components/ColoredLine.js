@@ -1,10 +1,10 @@
-const ColoredLine = ({ color }) => {
+const ColoredLine = ({ color,}) => {
     return(
       <hr
         style={{
           color: color,
           backgroundColor: color,
-          height: 5,
+          height: 0.3,
           width: 1000
         }}
         className="line"

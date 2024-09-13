@@ -1,58 +1,83 @@
 // Import Assets
-import uniswap from '../assets/WIP.jpg';
-import compound from '../assets/image.png';
-import aave from '../assets/aave.png';
+import christmasLights from '../assets/Christmas Lights Decoration.jpg';
+import window from '../assets/Modern building glass wall.jpg';
+import gutter from '../assets/Old roof tiles.jpg';
+import snow from '../assets/ant-rozetsky-H9m6mfeeakU-unsplash.jpg'
+import pressurewashing from '../assets/the-graphic-space-N8JTVOmHU7A-unsplash.jpg'
 import ColoredLine from './ColoredLine'
 import YoutubeEmbed from './YoutubeEmbed'
+import ScrollH1 from './ScrollH1'
+import FadeInComponent from './FadeComponent';
+import useFadeInOnScroll from '../Interactions/Fade';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Projects = () => {
+    const [fadeRef, isVisible] = useFadeInOnScroll({
+        threshold: 1 // Adjust this threshold as needed
+      });
+
+      const scrollServices = useSelector(state => state.scroll.services)
+
     return (
         <section className="projects">
-            <h2>My Projects</h2>
-
+            <div className='projects__main'>
+            <ScrollH1 text="Services" dispatchValue={'SERVICES'} classsData={scrollServices} />
+                <div className="projects__card__main">
+                    <h3>Expert Window Cleaning And Detailing</h3>                    
+                    <img src={window} alt="Uniswap Swap Page" />
+                    <p ref={fadeRef} className={`fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
+                        Professional, Stunning, Spotless, just a few words people use to describe our Window Cleaning
+                        this dedication, combined with our solution that we use on windows, ensures that your windows will be pristine
+                        and will stay like that for a long time
+                    </p>
+                    <hr color={'#000000'}/>
+                </div>
+            </div>
+            
             <div className="projects__cards">
 
                 <div className="projects__card">
-                    <h3 style={{ color: "#5d47ff"}}>ETH Battles</h3>
-                    <img src={uniswap} alt="Uniswap Swap Page" />
-                    <p>A Web3 Videogame where players duel each other in 1v1 or Guild vs Guild quick and fast paced matches.
-                       The objective is to survive, craft gear, and destroy the enemy tower. Each party will stake equal amounts of ERC-20
-                       Tokens and the winner takes all. Implements features such as a Marketplace with NFT items that you can use in the game, social tab with friends and guilds.
-                       multi purpose pop up window, Token Selector functionality and more
-
+                    <h3>Pressure Washing</h3>
+                    <img src={pressurewashing}/>
+                    <p>
+                    Revitalize the appearance of your property with our high-quality pressure washing services. 
+                    We remove dirt, grime, and stains from surfaces like driveways, patios, and siding to restore their original shine. 
+                    Our professional pressure washing ensures a clean, refreshed look for your home or business.
                     </p>
-
-                    <button className='button__WIP'>Site</button>
-                    <a href="https://github.com/0-GMan-1/Eth-Battles" target="_blank" className="button">Code</a>
                 </div>
 
                 <div className="projects__card">
-                    <h3>GC Token Exchange</h3>
-                    <img src={compound} alt="Compound Landing Page" />
-                    <p>A fully fledged, Defi, Cryptocurrency Exchange with 3 custom ERC20 Tokens.
-                    This website built in React, is interactable with metamask wallets. Has an entire database built in Redux.
-                    Incorperates features such as Depositing, Withdrawing,
-                    Pricecharts and a live transaction status, just to name a few.
-                    Smart Contracts written in Solidity, are deployed to the Goerli Testnet, along with the website being deployed to the IPFS
-                    making this entirely Web 3.0
+                    <h3>Gutter Cleaning</h3>
+                    <img src={gutter} alt="Compound Landing Page" />
+                    <p>
+                    Ensure your home’s gutters are free from debris and functioning properly with our expert gutter cleaning services. We offer 
+                    thorough inspections and efficient cleaning 
+                    to prevent water damage and maintain the integrity of your roof. Trust our team for reliable and affordable gutter maintenance.
                     </p>
-
-                    <a href="https://raspy-firefly-1732.on.fleek.co/" target="_blank" className="button">Site</a>
-                    <a href="https://github.com/0-GMan-1/Blockchain-Bootcamp" target="_blank" className="button">Code</a>
                 </div>
 
                 <div className="projects__card">
-                    <h3>Trading Bot</h3>
-                    <YoutubeEmbed embedId="IlpewHiZP58" />
-                    <p>An Arbitrage trading bot. Utilizes a javascript bot that interacts with a flashloan smart contract.
-                    The bot can scan for arbitrage opportunities on multiple exchanges, and for multiple tokens at the same time
-                    to make sure you don't miss out on potential profit. The smart contract uses the DYDX flashloan provider
-                    and plugs into the desired exchanges while it waits for an opportunity
+                    <h3>Christmas Lights</h3>
+                    <img src={christmasLights}/>
+                    <p>
+                    Transform your home into a festive wonderland with our holiday lighting services. We specialize in custom holiday 
+                    light installations that bring joy and cheer to your property. 
+                    From design, to setup, to taking it down after the holidays, our team ensures a dazzling display that enhances 
+                    your home’s curb appeal during the holiday season.
                     </p>
-
-                    <a href="https://www.youtube.com/watch?v=IlpewHiZP58&ab_channel=GrahamSkeen" target="_blank" className="button">Video</a>
-                    <a href="https://github.com/0-GMan-1/ArbitrageBot" target="_blank" className="button">Code</a>
                 </div>
+
+                <div className="projects__card">
+                    <h3>Snow Removal</h3>
+                    <img src={snow}/>
+                    <p>
+                    Keep your property safe and accessible this winter with our prompt and reliable snow removal services. 
+                    Our team handles snow plowing, salting, and de-icing to ensure clear driveways and walkways. 
+                    Enjoy peace of mind and a hassle-free winter with our professional snow removal solutions.
+                    </p>
+                </div>
+
             </div>
             <ColoredLine color="#e8e8e8" />
         </section>
