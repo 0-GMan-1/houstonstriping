@@ -4,29 +4,20 @@ function sendEmail(type, nameVal, lastNameVal, phone, windows, feet, driveway, b
     e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
     let script = ''
     
-    if (type === 'windows') {
+    if (type === 'striping') {
         script = `QUOTE REQUEST ---- ${nameVal} ${lastNameVal} has requested a quote today for ${type}
-        They have ${windows} windows and have a few notes ${notes}
+        They have ${windows} lines and have a few notes ${notes}
         Contact them at ${phone}
         `
-    } else if (type === 'lights') {
+    } 
+    else if (type === 'pressurewashing') {
         script = `QUOTE REQUEST ---- ${nameVal} ${lastNameVal} has requested a quote today for ${type}
-        They have ${feet} estimated feet. For the bulbs they wanted ${bulbs}
+        They have ${feet} estimated feet and they answered ${driveway} for the specified areas
         They have a few notes ${notes}
         Contact them at ${phone}
         `
-    } else if (type === 'powerwashing') {
-        script = `QUOTE REQUEST ---- ${nameVal} ${lastNameVal} has requested a quote today for ${type}
-        They have ${feet} estimated feet and they answered ${driveway} for if they want their driveway done
-        They have a few notes ${notes}
-        Contact them at ${phone}
-        `
-    } else if (type === 'gutters') {
-        script = `QUOTE REQUEST ---- ${nameVal} ${lastNameVal} has requested a quote today for ${type}
-        They have ${feet} estimated feet and have a few notes ${notes}
-        Contact them at ${phone}
-        `
-    } else if (type === 'snow') {
+    }  
+    else if (type === 'asphault/sealcoat') {
         script = `QUOTE REQUEST ---- ${nameVal} ${lastNameVal} has requested a quote today for ${type}
         They have ${feet} estimated feet and have a few notes ${notes}
         Contact them at ${phone}

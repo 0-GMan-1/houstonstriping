@@ -3,7 +3,7 @@ import ColoredLine from './ColoredLine';
 import AnimatedNumbers from "react-animated-numbers";
 import { useState, useEffect } from 'react';
 import {ScrollH1} from '..'
-import banner from '../assets/logowebsite.jpg'
+import banner from '../assets/291863070_421037063372030_8590632365262978750_n.jpg'
 import {useDispatch} from 'react-redux'
 
 const Header = () => {
@@ -31,32 +31,16 @@ const Header = () => {
     return (
         <section className='header'>
           <div className='headerimgcontainer'>
-            <img className='headerimg' src={banner} />
+            <img src={banner} />
           </div>  
             <div className='header__content'>
-                <p>Windows cleaned in Calgary:
-                  <div> 
-                    
-                    <AnimatedNumbers
-                        includeComma
-                        transitions={(index) => ({
-                        type: "spring",
-                        duration: index + 0.3,
-                        })}
-                        animateToNumber={num}
-                        fontStyle={{
-                        fontSize: 40,
-                        color: "white",
-                        }}
-                    />
-
-                  </div>  
+                <p>WEBSITE UPDATE WORK IN PROGRESS
                 </p>
                 <ColoredLine color={'#FFFFFF'} />
                 <button className="buttonhead" onClick={clickHandler}>
                     <p>click now to get a free quote!</p>
                     <p>or Call</p>
-                    <p className='phone'>+1 551-364-3002</p>
+                    <p className='phone'>+1 346-639-9979</p>
                 </button>
             </div>
         </section>

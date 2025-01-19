@@ -23,24 +23,18 @@ code {
 }
 
 .App {
-  max-width: 1400px;
   margin: 0 auto;
 }
 
 html {
-  background-color: #232121;
+  background-color: #060606;
 }
 
 /* ------------------------------------------------------ */
 /* -- Navigation -- */
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 25px;
-} */
+ header {
+} 
 
 .about,
 .projects,
@@ -73,19 +67,12 @@ p, h1, h2 {
 /* -- Header -- */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
 
-  text-align: center;
-
-  align-items: flex-start;
-
-  background-image: url('./assets/vecteezy_fragment-of-a-modern-office-building-abstract-geometric_46187674.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  padding-bottom: 5em;
+.header__content {
+  font-size: xx-large;
 }
 
 .header__content h1 {
@@ -99,7 +86,7 @@ p, h1, h2 {
 
 
 .header__content {
-  width: 700px;
+  width: 1000px;
   margin: 0 auto;
 
   align-items: center;
@@ -114,34 +101,27 @@ p, h1, h2 {
   margin-right: -20em;
 }
 
-.headerimg {
-  height: 40%;
-  width: 40%;
+.headerimgcontainer {
+  display: flex;
+  flex-direction: column;
 
-  border: transparent;
-  border-radius: 10px;
+  width: 12%;
+
+  margin: 0 auto;
 }
 
 .headerimgcontainer {
-  width: 100vw; /* Sets the width to 100% of the viewport width */
-    /* Optional: Remove margin and padding to ensure full-width effect */
-  left: 0; /* Align to the left edge */  
-  color: white;
-
-  background-color: #FFFFFF;
-
-  margin-bottom: 5em;
-
-  padding-top: 1em;
-  padding-bottom: 1em;
+  margin-top: 2em;
 }
 
 .header__content p {
   display: flex;
   flex-direction: column;
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   align-items: center;
+
+  margin-top: 2em;
 }
 
 .header__content button {
@@ -150,7 +130,7 @@ p, h1, h2 {
 
 .header__content .buttonhead {
 
-  width: 500px;
+  width: 400px;
   height: 300px;
 
   font-variant: small-caps;
@@ -165,19 +145,23 @@ p, h1, h2 {
 
 .header__content .buttonhead:hover {
   transition: all 500ms ease;
-  width: 500px;
-  height: 300px;
+  
+  width: 410px;
+  height: 310px;
 
   font-variant: small-caps;
 
   border-radius: 10%;
 
-  background-color:#01169d;
-  border: solid #01169d 5px;
+  background-color:#ffc800;
+  border: solid #ffc800 5px;
 }
 
 .buttonhead p {
   line-height: 1.5;
+  font-size: 30px;
+
+  margin: 0
 }
 
 .buttonhead .phone {
@@ -411,9 +395,9 @@ p, h1, h2 {
 	border: none;
 	border-radius: 10px;
 
-	width: 40%;
+	width: 50%;
 	margin: 0.5em auto;
-	padding: 0.7em;
+	padding: 0.8em;
 
 	font-family: "DM Sans";
 	font-weight: 400;
@@ -522,7 +506,7 @@ p, h1, h2 {
 
 .alert2 button {
   color: white;
-  background-color: #001075;
+  background-color: #ffa600;
   margin-top: 1em;
 }
 
@@ -983,7 +967,7 @@ p, h1, h2 {
 .button {
   display: inline-block;
 
-  background: #010c54;
+  background: #ffc600;
 
   padding: 20px 50px;
 
@@ -1023,7 +1007,7 @@ p, h1, h2 {
 .buttonhead {
   display: inline-block;
 
-  background: #001075;
+  background: #ffa600;
 
   border: 20px solid #04000a;
   border-radius: 35px;
@@ -1039,7 +1023,7 @@ p, h1, h2 {
 }
 
 .button:hover {
-  background: #7729ff;
+  background: #ffc800;
   color: #FFFFFF;
 }
 

@@ -13,12 +13,6 @@ function App() {
 		<div className="App">
 			<Header />
 			<Alert />
-			<Reviews />
-			<Projects />
-			<About />
-			<Experience />
-			<Social />
-			<Footer />
 		</div>
 	);
 }

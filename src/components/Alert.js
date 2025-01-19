@@ -54,11 +54,9 @@ const Alert = () => {
         <img src={XLogo} alt='Logos' className='close' onClick={removeHandler}/>
           <h1>QUOTE FOR <><select name="networks" id="networks" onChange={(e) => typeHandler(e)}>
           <option value="0" disabled>Select Quote Type</option>
-          <option value='windows'>Window Cleaning</option>
-          <option value='lights'>Holiday Lighting</option>
-          <option value='powerwashing'>Power Washing</option>
-          <option value='gutters'>Gutter Cleaning</option>
-          <option value='snow'>Snow Removal</option>
+          <option value='striping'>Striping</option>
+          <option value='asphault/sealcoat'>Asphault/Sealcoat</option>
+          <option value='pressurewashing'>Pressure Washing</option>
         </select></></h1>
           <h1 className='alert2--warning--remove' ref={formRef}>Invalid Username or Password</h1>
             <div className='alert2--form'>    
@@ -70,41 +68,30 @@ const Alert = () => {
                 <label>Phone Number</label>
                 <input className='alert2--input' onChange={(e) => setPhone(e.target.value)}></input>
                 
-                {type === 'windows' ?
+                {type === 'striping' ?
                 (
                 <div className='alertform--small'>
-                  <label>Amount of Windows</label>
+                  <label>Number of Lines</label>
                   <input className='alert2--input' onChange={(e) => setWindows(e.target.value)}></input>
                 </div>
-                ) : type === 'lights' ? (
+                ) : type === 'asphault/sealcoat' ? (
                 <div className='alertform--small'>
                   <label>Estimated Feet</label>
                   <input className='alert2--input' onChange={(e) => setFeet(e.target.value)}></input>
-                  <label>Bulb Colors</label>
-                  <input className='alert2--input' onChange={(e) => setBulbs(e.target.value)}></input>
                 </div>
-                )
-                : type === 'powerwashing' ? (
+                ) : type === 'pressurewashing' ? (
                   <div className='alertform--small'>
                     <label>Estimated Feet</label>
                     <input className='alert2--input' onChange={(e) => setFeet(e.target.value)}></input>
-                    <label>Driveway? (yes or no)</label>
+                    <label>Specify Areas</label>
                     <input className='alert2--input' onChange={(e) => setDriveway(e.target.value)}></input>
                   </div>
-                  )
-                  : type === 'gutters' ? (
-                    <div className='alertform--small'>
-                      <label>Estimated Feet</label>
-                      <input className='alert2--input' onChange={(e) => setFeet(e.target.value)}></input>
-                    </div>
-                  )
-                  : (
-                    <div className='alertform--small'>
-                      <label>Estimated Feet</label>
-                      <input className='alert2--input' onChange={(e) => setFeet(e.target.value)}></input>
-                    </div>
-                  )
-                  
+                ) : (
+                  <div className='alertform--small'>
+                    <label>Number of Lines</label>
+                    <input className='alert2--input' onChange={(e) => setWindows(e.target.value)}></input>
+                  </div>
+                  )                 
                 }
 
                 <label>Notes</label>
