@@ -4,7 +4,8 @@ export const quote = (state = {started: false, ended: true, submitted: false, ty
 			return {
 				...state,
 				started: true,
-                ended: false
+                ended: false,
+                completed: false,
 			}
         case 'QUOTE_DATARESET':
             return {

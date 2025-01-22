@@ -38,7 +38,7 @@ const Alert = () => {
   }
 
   const quoteHandler = (e) => {
-    sendEmail(type, nameVal, lastNameVal, phone, windows, feet, driveway, bulbs, notes, e)
+    sendEmail(type, nameVal, lastNameVal, phone, windows, feet, driveway, bulbs, notes, dispatch, e)
   }
 
   useEffect(() => {
@@ -59,7 +59,14 @@ const Alert = () => {
           <option value='pressurewashing'>Pressure Washing</option>
         </select></></h1>
           <h1 className='alert2--warning--remove' ref={formRef}>Invalid Username or Password</h1>
-            <div className='alert2--form'>    
+            {isQuoteComplete ? (
+                  <div className='alertform--small'>
+                    <h1>
+                      Your quote has been submitted and our team will be with you shortly!
+                    </h1>
+                  </div>
+            ) : isQuote ? (
+              <div className='alert2--form'>    
               <form onSubmit={(e) => quoteHandler(e)}>
                 <label>First and Last Name</label>
                 <input className='alert2--input' onChange={(e) => setNameVal(e.target.value)}></input>
@@ -86,6 +93,7 @@ const Alert = () => {
                     <label>Specify Areas</label>
                     <input className='alert2--input' onChange={(e) => setDriveway(e.target.value)}></input>
                   </div>
+
                 ) : (
                   <div className='alertform--small'>
                     <label>Number of Lines</label>
@@ -101,6 +109,8 @@ const Alert = () => {
                 <button className='button' type='submit'>Submit</button>
               </form>  
             </div>
+            ) : (<h1>error</h1>)
+            }
         </div>
     </div>
   )

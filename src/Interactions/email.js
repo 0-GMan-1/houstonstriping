@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 
-function sendEmail(type, nameVal, lastNameVal, phone, windows, feet, driveway, bulbs, notes, e) {
+export const sendEmail = (type, nameVal, lastNameVal, phone, windows, feet, driveway, bulbs, notes, dispatch, e) => {
     e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
     let script = ''
     
@@ -34,6 +34,8 @@ function sendEmail(type, nameVal, lastNameVal, phone, windows, feet, driveway, b
           console.log('FAILED...', error);
         },
       );
+
+    dispatch({ type: 'QUOTE_COMPLETED' })
       
     
   }

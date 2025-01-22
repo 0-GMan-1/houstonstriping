@@ -5,7 +5,6 @@ const ColoredLine = ({ color,}) => {
           color: color,
           backgroundColor: color,
           height: 0.3,
-          width: 1000
         }}
         className="line"
       />
